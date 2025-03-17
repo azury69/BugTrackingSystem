@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BugTrackingSystem.Migrations
 {
     /// <inheritdoc />
-    public partial class initialcreate : Migration
+    public partial class someupdates : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -165,17 +165,18 @@ namespace BugTrackingSystem.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedById = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    CreatedById = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ApplicationUserId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Projects", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Projects_AspNetUsers_CreatedById",
-                        column: x => x.CreatedById,
+                        name: "FK_Projects_AspNetUsers_ApplicationUserId",
+                        column: x => x.ApplicationUserId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -184,8 +185,8 @@ namespace BugTrackingSystem.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ProjectId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Role = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -196,17 +197,17 @@ namespace BugTrackingSystem.Migrations
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ProjectMembers_Projects_ProjectId",
                         column: x => x.ProjectId,
                         principalTable: "Projects",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Scrums",
+                name: "Sprints",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -217,9 +218,9 @@ namespace BugTrackingSystem.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Scrums", x => x.Id);
+                    table.PrimaryKey("PK_Sprints", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Scrums_Projects_ProjectId",
+                        name: "FK_Sprints_Projects_ProjectId",
                         column: x => x.ProjectId,
                         principalTable: "Projects",
                         principalColumn: "Id",
@@ -234,27 +235,121 @@ namespace BugTrackingSystem.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ScrumId = table.Column<int>(type: "int", nullable: false),
-                    AssignedToId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    AssignedToId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Points = table.Column<int>(type: "int", nullable: false),
-                    Attachments = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    SprintId = table.Column<int>(type: "int", nullable: true),
+                    ApplicationUserId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Stories", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Stories_AspNetUsers_AssignedToId",
-                        column: x => x.AssignedToId,
+                        name: "FK_Stories_AspNetUsers_ApplicationUserId",
+                        column: x => x.ApplicationUserId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Stories_Scrums_ScrumId",
-                        column: x => x.ScrumId,
-                        principalTable: "Scrums",
+                        name: "FK_Stories_Sprints_SprintId",
+                        column: x => x.SprintId,
+                        principalTable: "Sprints",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Activity",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Timestamp = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    StoryId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Activity", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Activity_Stories_StoryId",
+                        column: x => x.StoryId,
+                        principalTable: "Stories",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Attachment",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FileName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FileContent = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    StoryId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Attachment", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Attachment_Stories_StoryId",
+                        column: x => x.StoryId,
+                        principalTable: "Stories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Bugs",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StoryId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Bugs", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Bugs_Stories_StoryId",
+                        column: x => x.StoryId,
+                        principalTable: "Stories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Comment",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    StoryId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comment", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Comment_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Comment_Stories_StoryId",
+                        column: x => x.StoryId,
+                        principalTable: "Stories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Activity_StoryId",
+                table: "Activity",
+                column: "StoryId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -296,6 +391,26 @@ namespace BugTrackingSystem.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Attachment_StoryId",
+                table: "Attachment",
+                column: "StoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Bugs_StoryId",
+                table: "Bugs",
+                column: "StoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comment_StoryId",
+                table: "Comment",
+                column: "StoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comment_UserId",
+                table: "Comment",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ProjectMembers_ProjectId",
                 table: "ProjectMembers",
                 column: "ProjectId");
@@ -306,29 +421,32 @@ namespace BugTrackingSystem.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Projects_CreatedById",
+                name: "IX_Projects_ApplicationUserId",
                 table: "Projects",
-                column: "CreatedById");
+                column: "ApplicationUserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Scrums_ProjectId",
-                table: "Scrums",
+                name: "IX_Sprints_ProjectId",
+                table: "Sprints",
                 column: "ProjectId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Stories_AssignedToId",
+                name: "IX_Stories_ApplicationUserId",
                 table: "Stories",
-                column: "AssignedToId");
+                column: "ApplicationUserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Stories_ScrumId",
+                name: "IX_Stories_SprintId",
                 table: "Stories",
-                column: "ScrumId");
+                column: "SprintId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Activity");
+
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -345,16 +463,25 @@ namespace BugTrackingSystem.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "ProjectMembers");
+                name: "Attachment");
 
             migrationBuilder.DropTable(
-                name: "Stories");
+                name: "Bugs");
+
+            migrationBuilder.DropTable(
+                name: "Comment");
+
+            migrationBuilder.DropTable(
+                name: "ProjectMembers");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "Scrums");
+                name: "Stories");
+
+            migrationBuilder.DropTable(
+                name: "Sprints");
 
             migrationBuilder.DropTable(
                 name: "Projects");

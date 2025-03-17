@@ -8,5 +8,7 @@
         public string CreatedById { get; set; }
         public string CreatedBy { get; set; } 
         public List<ProjectMember> Members { get; set; } = new List<ProjectMember>();
+        public List<Sprint> Sprints { get; set; } = new List<Sprint>();
+
     }
 }

@@ -5,22 +5,22 @@
 namespace BugTrackingSystem.Migrations
 {
     /// <inheritdoc />
-    public partial class initialcreate2 : Migration
+    public partial class someupdates1234 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Projects_AspNetUsers_CreatedById",
-                table: "Projects");
+                name: "FK_ProjectMembers_AspNetUsers_UserId",
+                table: "ProjectMembers");
 
             migrationBuilder.DropIndex(
-                name: "IX_Projects_CreatedById",
-                table: "Projects");
+                name: "IX_ProjectMembers_UserId",
+                table: "ProjectMembers");
 
             migrationBuilder.AlterColumn<string>(
-                name: "CreatedById",
-                table: "Projects",
+                name: "UserId",
+                table: "ProjectMembers",
                 type: "nvarchar(max)",
                 nullable: false,
                 oldClrType: typeof(string),
@@ -28,25 +28,18 @@ namespace BugTrackingSystem.Migrations
 
             migrationBuilder.AddColumn<string>(
                 name: "ApplicationUserId",
-                table: "Projects",
+                table: "ProjectMembers",
                 type: "nvarchar(450)",
                 nullable: true);
 
-            migrationBuilder.AddColumn<string>(
-                name: "CreatedBy",
-                table: "Projects",
-                type: "nvarchar(max)",
-                nullable: false,
-                defaultValue: "");
-
             migrationBuilder.CreateIndex(
-                name: "IX_Projects_ApplicationUserId",
-                table: "Projects",
+                name: "IX_ProjectMembers_ApplicationUserId",
+                table: "ProjectMembers",
                 column: "ApplicationUserId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Projects_AspNetUsers_ApplicationUserId",
-                table: "Projects",
+                name: "FK_ProjectMembers_AspNetUsers_ApplicationUserId",
+                table: "ProjectMembers",
                 column: "ApplicationUserId",
                 principalTable: "AspNetUsers",
                 principalColumn: "Id");
@@ -56,38 +49,34 @@ namespace BugTrackingSystem.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Projects_AspNetUsers_ApplicationUserId",
-                table: "Projects");
+                name: "FK_ProjectMembers_AspNetUsers_ApplicationUserId",
+                table: "ProjectMembers");
 
             migrationBuilder.DropIndex(
-                name: "IX_Projects_ApplicationUserId",
-                table: "Projects");
+                name: "IX_ProjectMembers_ApplicationUserId",
+                table: "ProjectMembers");
 
             migrationBuilder.DropColumn(
                 name: "ApplicationUserId",
-                table: "Projects");
-
-            migrationBuilder.DropColumn(
-                name: "CreatedBy",
-                table: "Projects");
+                table: "ProjectMembers");
 
             migrationBuilder.AlterColumn<string>(
-                name: "CreatedById",
-                table: "Projects",
+                name: "UserId",
+                table: "ProjectMembers",
                 type: "nvarchar(450)",
                 nullable: false,
                 oldClrType: typeof(string),
                 oldType: "nvarchar(max)");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Projects_CreatedById",
-                table: "Projects",
-                column: "CreatedById");
+                name: "IX_ProjectMembers_UserId",
+                table: "ProjectMembers",
+                column: "UserId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Projects_AspNetUsers_CreatedById",
-                table: "Projects",
-                column: "CreatedById",
+                name: "FK_ProjectMembers_AspNetUsers_UserId",
+                table: "ProjectMembers",
+                column: "UserId",
                 principalTable: "AspNetUsers",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);

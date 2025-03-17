@@ -1,6 +1,6 @@
 ﻿namespace BugTrackingSystem.Models
 {
-    public class Scrum
+    public class Sprint
     {
         public int Id { get; set; }
         public DateTime StartDate { get; set; }

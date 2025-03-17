@@ -4,6 +4,7 @@ using BugTrackingSystem.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BugTrackingSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250314180824_some updates")]
+    partial class someupdates
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -234,32 +237,6 @@ namespace BugTrackingSystem.Migrations
                     b.ToTable("Projects");
                 });
 
-            modelBuilder.Entity("BugTrackingSystem.Models.ProjectInvitation", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("InvitedUserEmail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsAccepted")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("ProjectId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Role")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Invitatoins");
-                });
-
             modelBuilder.Entity("BugTrackingSystem.Models.ProjectMember", b =>
                 {
                     b.Property<int>("Id")
@@ -267,9 +244,6 @@ namespace BugTrackingSystem.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ApplicationUserId")
-                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("ProjectId")
                         .HasColumnType("int");
@@ -279,13 +253,13 @@ namespace BugTrackingSystem.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ApplicationUserId");
-
                     b.HasIndex("ProjectId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("ProjectMembers");
                 });
@@ -326,6 +300,7 @@ namespace BugTrackingSystem.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("AssignedToId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
@@ -545,15 +520,21 @@ namespace BugTrackingSystem.Migrations
 
             modelBuilder.Entity("BugTrackingSystem.Models.ProjectMember", b =>
                 {
-                    b.HasOne("BugTrackingSystem.Models.ApplicationUser", null)
-                        .WithMany("ProjectMemberships")
-                        .HasForeignKey("ApplicationUserId");
-
-                    b.HasOne("BugTrackingSystem.Models.Project", null)
+                    b.HasOne("BugTrackingSystem.Models.Project", "Project")
                         .WithMany("Members")
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("BugTrackingSystem.Models.ApplicationUser", "User")
+                        .WithMany("ProjectMemberships")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Project");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("BugTrackingSystem.Models.Sprint", b =>

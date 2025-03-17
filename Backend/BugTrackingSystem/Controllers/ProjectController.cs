@@ -3,6 +3,7 @@ using BugTrackingSystem.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BugTrackingSystem.Controllers
 {
@@ -33,6 +34,38 @@ namespace BugTrackingSystem.Controllers
 
             return Ok(projects);
         }
+        [HttpGet("api/project/{id}")]
+        public IActionResult GetProjectById(int id)
+        {
+            var project = _context.Projects
+                .FirstOrDefault(p => p.Id == id);
+
+            if (project == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(project);
+        }
+        [HttpDelete("api/project/{id}")]
+        public async Task<IActionResult> DeleteProject(int id)
+        {
+            var project = await _context.Projects.FindAsync(id);
+            if (project == null)
+            {
+                return NotFound("Project not found.");
+            }
+
+            // Remove the project from the ProjectMembers table as well
+            var projectMembers = _context.ProjectMembers.Where(pm => pm.ProjectId == id);
+            _context.ProjectMembers.RemoveRange(projectMembers);
+
+            // Remove the project
+            _context.Projects.Remove(project);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Project deleted successfully." });
+        }
         [HttpPost("api/project")]
         public async Task<IActionResult> CreateProject([FromBody] CreateProjectDto createProjectDto)
         {
@@ -40,7 +73,7 @@ namespace BugTrackingSystem.Controllers
             {
                 return BadRequest("Project name and description are required.");
             }
-
+ 
             var currentUser = await _userManager.GetUserAsync(User);
             if (currentUser == null)
             {
@@ -59,6 +92,20 @@ namespace BugTrackingSystem.Controllers
             {
                 _context.Projects.Add(project);
                 await _context.SaveChangesAsync();
+                var projectMember = new ProjectMember
+                {
+                    ProjectId = project.Id,
+                    UserId = currentUser.Id,
+                    Role = RoleType.ProductOwner
+                };
+                _context.ProjectMembers.Add(projectMember);
+                await _context.SaveChangesAsync();
+                // Assign the role of ProductOwner to the user
+                var user = await _userManager.FindByIdAsync(currentUser.Id);
+                if (user != null)
+                {
+                    await _userManager.AddToRoleAsync(user, "ProductOwner");
+                }
                 return CreatedAtAction(nameof(CreateProject), new { id = project.Id }, project);
             }
             catch (Exception ex)
