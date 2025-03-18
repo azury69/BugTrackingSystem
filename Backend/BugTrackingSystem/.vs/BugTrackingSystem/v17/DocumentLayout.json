@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|c:\\users\\maxte\\onedrive\\desktop\\bugtrackingsystem\\backend\\bugtrackingsystem\\controllers\\invitationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|solutionrelative:controllers\\invitationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|c:\\users\\maxte\\onedrive\\desktop\\bugtrackingsystem\\backend\\bugtrackingsystem\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|solutionrelative:controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,24 +11,32 @@
       "RelativeMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|solutionrelative:models\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|c:\\users\\maxte\\onedrive\\desktop\\bugtrackingsystem\\backend\\bugtrackingsystem\\controllers\\invitationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|solutionrelative:controllers\\invitationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|c:\\users\\maxte\\onedrive\\desktop\\bugtrackingsystem\\backend\\bugtrackingsystem\\models\\createstorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|solutionrelative:models\\createstorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|c:\\users\\maxte\\onedrive\\desktop\\bugtrackingsystem\\backend\\bugtrackingsystem\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|c:\\users\\maxte\\onedrive\\desktop\\bugtrackingsystem\\backend\\bugtrackingsystem\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|solutionrelative:models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|c:\\users\\maxte\\onedrive\\desktop\\bugtrackingsystem\\backend\\bugtrackingsystem\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|c:\\users\\maxte\\onedrive\\desktop\\bugtrackingsystem\\backend\\bugtrackingsystem\\models\\projectinvitationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|solutionrelative:models\\projectinvitationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|c:\\users\\maxte\\onedrive\\desktop\\bugtrackingsystem\\backend\\bugtrackingsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|c:\\users\\maxte\\onedrive\\desktop\\bugtrackingsystem\\backend\\bugtrackingsystem\\models\\createstorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|solutionrelative:models\\createstorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|c:\\users\\maxte\\onedrive\\desktop\\bugtrackingsystem\\backend\\bugtrackingsystem\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|c:\\users\\maxte\\onedrive\\desktop\\bugtrackingsystem\\backend\\bugtrackingsystem\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|solutionrelative:models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|c:\\users\\maxte\\onedrive\\desktop\\bugtrackingsystem\\backend\\bugtrackingsystem\\models\\activity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,8 +71,8 @@
       "RelativeMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|solutionrelative:models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Models\\Bug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Bug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|c:\\users\\maxte\\onedrive\\desktop\\bugtrackingsystem\\backend\\bugtrackingsystem\\models\\bug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9ECDBC48-C39C-49E4-A10A-1C46457D8CCC}|BugTrackingSystem.csproj|solutionrelative:models\\bug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,17 +82,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 105,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "InvitationController.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Controllers\\InvitationController.cs",
               "RelativeDocumentMoniker": "Controllers\\InvitationController.cs",
               "ToolTip": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Controllers\\InvitationController.cs",
               "RelativeToolTip": "Controllers\\InvitationController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAwF8AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAIA4wCkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T03:01:58.276Z",
               "EditorCaption": ""
@@ -101,14 +105,14 @@
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAYwFUAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwCoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T17:21:07.106Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
@@ -121,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Models\\LoginDto.cs",
               "RelativeDocumentMoniker": "Models\\LoginDto.cs",
@@ -134,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
@@ -147,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "CreateStoryDto.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Models\\CreateStoryDto.cs",
               "RelativeDocumentMoniker": "Models\\CreateStoryDto.cs",
@@ -160,33 +164,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "RoleType.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Models\\RoleType.cs",
               "RelativeDocumentMoniker": "Models\\RoleType.cs",
               "ToolTip": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Models\\RoleType.cs",
               "RelativeToolTip": "Models\\RoleType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T18:15:53.718Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ProjectController.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Controllers\\ProjectController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProjectController.cs",
               "ToolTip": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Controllers\\ProjectController.cs",
               "RelativeToolTip": "Controllers\\ProjectController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAcwGYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T18:33:38.569Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
+              "Title": "ProjectInvitationDto.cs",
+              "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Models\\ProjectInvitationDto.cs",
+              "RelativeDocumentMoniker": "Models\\ProjectInvitationDto.cs",
+              "ToolTip": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Models\\ProjectInvitationDto.cs",
+              "RelativeToolTip": "Models\\ProjectInvitationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T15:24:07.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "CreateSprintDto.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Models\\CreateSprintDto.cs",
               "RelativeDocumentMoniker": "Models\\CreateSprintDto.cs",
@@ -194,12 +211,11 @@
               "RelativeToolTip": "Models\\CreateSprintDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T06:17:52.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T06:17:52.135Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Sprint.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Models\\Sprint.cs",
               "RelativeDocumentMoniker": "Models\\Sprint.cs",
@@ -207,12 +223,11 @@
               "RelativeToolTip": "Models\\Sprint.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T06:06:58.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T06:06:58.355Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -220,12 +235,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAkwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T11:13:15.215Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T11:13:15.215Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Activity.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Models\\Activity.cs",
               "RelativeDocumentMoniker": "Models\\Activity.cs",
@@ -233,12 +247,11 @@
               "RelativeToolTip": "Models\\Activity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T17:41:35.152Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T17:41:35.152Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Project.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Models\\Project.cs",
               "RelativeDocumentMoniker": "Models\\Project.cs",
@@ -246,12 +259,11 @@
               "RelativeToolTip": "Models\\Project.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T17:12:30.274Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T17:12:30.274Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "SprintController.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Controllers\\SprintController.cs",
               "RelativeDocumentMoniker": "Controllers\\SprintController.cs",
@@ -259,12 +271,11 @@
               "RelativeToolTip": "Controllers\\SprintController.cs",
               "ViewState": "AgIAABgAAAAAAAAAAADwvx4AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T06:06:37.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T06:06:37.444Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Story.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Models\\Story.cs",
               "RelativeDocumentMoniker": "Models\\Story.cs",
@@ -272,12 +283,11 @@
               "RelativeToolTip": "Models\\Story.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAA5wBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T17:12:22.55Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T17:12:22.55Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "StoryController.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Controllers\\StoryController.cs",
               "RelativeDocumentMoniker": "Controllers\\StoryController.cs",
@@ -285,12 +295,11 @@
               "RelativeToolTip": "Controllers\\StoryController.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAAwFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T04:32:49.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T04:32:49.53Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Bug.cs",
               "DocumentMoniker": "C:\\Users\\maxte\\OneDrive\\Desktop\\BugTrackingSystem\\Backend\\BugTrackingSystem\\Models\\Bug.cs",
               "RelativeDocumentMoniker": "Models\\Bug.cs",

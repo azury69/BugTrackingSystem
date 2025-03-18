@@ -159,3 +159,4 @@ C:\Users\maxte\OneDrive\Desktop\BugTrackingSystem\Backend\BugTrackingSystem\obj\
 C:\Users\maxte\OneDrive\Desktop\BugTrackingSystem\Backend\BugTrackingSystem\obj\Debug\net8.0\BugTrackingSystem.genruntimeconfig.cache
 C:\Users\maxte\OneDrive\Desktop\BugTrackingSystem\Backend\BugTrackingSystem\obj\Debug\net8.0\ref\BugTrackingSystem.dll
 C:\Users\maxte\OneDrive\Desktop\BugTrackingSystem\Backend\BugTrackingSystem\obj\Debug\net8.0\BugTrackingSystem.sourcelink.json
+C:\Users\maxte\OneDrive\Desktop\BugTrackingSystem\Backend\BugTrackingSystem\bin\Debug\net8.0\Newtonsoft.Json.dll

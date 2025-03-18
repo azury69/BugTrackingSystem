@@ -31,13 +31,17 @@ namespace BugTrackingSystem.Controllers
             {
                 return NotFound("User not found.");
             }
+            if (!Enum.TryParse(model.Role, true, out RoleType assignedRole))
+            {
+                return BadRequest("Invalid role type.");
+            }
 
             // Create the Invitation
             var invitation = new ProjectInvitation
             {
                 ProjectId = model.ProjectId,
                 InvitedUserEmail = model.InvitedUserEmail,
-                Role = model.Role
+                Role = assignedRole
             };
 
             _context.Invitatoins.Add(invitation);

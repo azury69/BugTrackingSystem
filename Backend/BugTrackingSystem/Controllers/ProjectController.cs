@@ -100,12 +100,7 @@ namespace BugTrackingSystem.Controllers
                 };
                 _context.ProjectMembers.Add(projectMember);
                 await _context.SaveChangesAsync();
-                // Assign the role of ProductOwner to the user
-                var user = await _userManager.FindByIdAsync(currentUser.Id);
-                if (user != null)
-                {
-                    await _userManager.AddToRoleAsync(user, "ProductOwner");
-                }
+               
                 return CreatedAtAction(nameof(CreateProject), new { id = project.Id }, project);
             }
             catch (Exception ex)
